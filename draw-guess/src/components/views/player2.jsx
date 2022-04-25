@@ -25,7 +25,6 @@ const Player2 = () => {
   }, [data]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.nativeEvent.target[0].value);
     const word = e.nativeEvent.target[0].value;
     const response = await axios.post(
       "https://draw-guess-sagi-reuven.herokuapp.com/game/guess",

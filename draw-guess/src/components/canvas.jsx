@@ -52,7 +52,8 @@ const Canvas = () => {
       );
       if (res.data === "game not found") {
         alert("Game Finished");
-        window.location = "/";
+        window.location =
+          "https://draw-guess-sagi-reuven.herokuapp.com/game/inSession";
       }
     } catch (err) {
       console.log(err);

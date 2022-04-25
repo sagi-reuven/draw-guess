@@ -38,7 +38,7 @@ class PickWord extends Component {
     this.setState({ word: target.innerText });
   };
   refresh = () => {
-    window.location = "/game/pick";
+    window.location = "https://draw-guess-sagi-reuven.herokuapp.com/game/pick";
   };
   render() {
     const { easy, medium, hard, word } = this.state;
