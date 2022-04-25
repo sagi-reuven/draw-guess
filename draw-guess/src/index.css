@@ -1,0 +1,9 @@
+.word-container {
+  border: 1px green solid;
+}
+
+img {
+  width: 60vw;
+  height: 40vh;
+  border: 1px solid black;
+}
