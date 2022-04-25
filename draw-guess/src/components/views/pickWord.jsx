@@ -37,9 +37,6 @@ class PickWord extends Component {
   handleClick = ({ target }) => {
     this.setState({ word: target.innerText });
   };
-  refresh = () => {
-    window.location = "/game/pick";
-  };
   render() {
     const { easy, medium, hard, word } = this.state;
     return (
@@ -81,9 +78,6 @@ class PickWord extends Component {
               {word && <h3 className="text-center">The Word Is ( {word} )</h3>}
             </div>
             <div className="col-12 d-flex justify-content-center">
-              <button className="btn btn-success me-5" onClick={this.refresh}>
-                Refresh Words
-              </button>
               <Link
                 to="/game/start"
                 className="btn btn-success ms-5"

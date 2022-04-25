@@ -9,7 +9,6 @@ class Welcome extends Component {
       const res = await axios.get(
         "https://draw-guess-sagi-reuven.herokuapp.com/game/draw"
       );
-      console.log(res);
       this.setState({ gameInSession: res.data === "no game" ? false : true });
     } catch (err) {
       console.log(err);

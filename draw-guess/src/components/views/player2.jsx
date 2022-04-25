@@ -49,7 +49,7 @@ const Player2 = () => {
           </div>
         </div>
         <div className="row text-center mt-5">
-          <div className="col-12">{<img src={data} alt="" />}</div>
+          <div className="col-12">{<img src={data || ""} alt="" />}</div>
           <div className="row justify-content-center">
             <div className="col-lg-6 col-sm-10">
               <form className="gy-5 mt-3 text-center" onSubmit={handleSubmit}>

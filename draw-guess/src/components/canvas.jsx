@@ -26,9 +26,6 @@ const Canvas = () => {
   };
 
   const finishDrawing = () => {
-    let image = new Image();
-    image.src = canvasElement.toDataURL();
-    console.log(image.src);
     contextRef.current.closePath();
     setIsDrawing(false);
   };
