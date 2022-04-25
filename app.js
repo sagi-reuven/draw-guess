@@ -6,9 +6,12 @@ require("dotenv").config();
 const { Game } = require("./model/game");
 require("dotenv").config();
 mongoose
-  .connect("mongodb://localhost/draw", {
-    useNewUrlParser: true,
-  })
+  .connect(
+    "mongodb+srv://sagi-reuven:sagilat@cluster0.kbojp.mongodb.net/draw?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+    }
+  )
   .then(() => console.log("connected to mongo"))
   .catch((err) => console.log(err));
 
