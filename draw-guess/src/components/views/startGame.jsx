@@ -6,7 +6,10 @@ class StartGame extends Component {
     gameStarted: false,
   };
   async componentDidMount() {
-    await axios.post("http://localhost:4000/game/start", {});
+    await axios.post(
+      "https://draw-guess-sagi-reuven.herokuapp.com/game/start",
+      {}
+    );
   }
   async componentDidUpdate() {}
   handleRefresh = async () => {

@@ -6,7 +6,9 @@ class Welcome extends Component {
 
   async componentDidMount() {
     try {
-      const res = await axios.get("http://localhost:4000/game/draw");
+      const res = await axios.get(
+        "https://draw-guess-sagi-reuven.herokuapp.com/game/draw"
+      );
       console.log(res);
       this.setState({ gameInSession: res.data === "no game" ? false : true });
     } catch (err) {

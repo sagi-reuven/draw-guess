@@ -44,9 +44,12 @@ const Canvas = () => {
     image.src = canvasElement.toDataURL();
     const final = image.src;
     try {
-      const res = await axios.post("http://localhost:4000/game/inSession", {
-        final,
-      });
+      const res = await axios.post(
+        "https://draw-guess-sagi-reuven.herokuapp.com/game/inSession",
+        {
+          final,
+        }
+      );
       if (res.data === "game not found") {
         alert("Game Finished");
         window.location = "/";

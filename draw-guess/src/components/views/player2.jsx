@@ -6,7 +6,9 @@ const Player2 = () => {
 
   const fetchData = async () => {
     try {
-      const response = axios.get("http://localhost:4000/game/drawing");
+      const response = axios.get(
+        "https://draw-guess-sagi-reuven.herokuapp.com/game/drawing"
+      );
       const result = await response;
       setData(result.data);
     } catch (err) {
@@ -25,9 +27,12 @@ const Player2 = () => {
     e.preventDefault();
     console.log(e.nativeEvent.target[0].value);
     const word = e.nativeEvent.target[0].value;
-    const response = await axios.post("http://localhost:4000/game/guess", {
-      word,
-    });
+    const response = await axios.post(
+      "https://draw-guess-sagi-reuven.herokuapp.com/game/guess",
+      {
+        word,
+      }
+    );
     if (response.data === "You Are Correct!!! You Won") {
       alert(response.data);
       window.location = "/";

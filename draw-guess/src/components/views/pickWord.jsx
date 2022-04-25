@@ -25,7 +25,10 @@ class PickWord extends Component {
       return;
     }
     try {
-      await axios.post("http://localhost:4000/game/word", { word });
+      await axios.post(
+        "https://draw-guess-sagi-reuven.herokuapp.com/game/word",
+        { word }
+      );
     } catch (err) {
       console.log(err);
     }
