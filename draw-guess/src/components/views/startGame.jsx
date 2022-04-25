@@ -11,6 +11,9 @@ class StartGame extends Component {
       {}
     );
   }
+  handleRefresh = () => {
+    window.location = "https://draw-guess-sagi-reuven.herokuapp.com/game/start";
+  };
   render() {
     return (
       <>
@@ -24,10 +27,7 @@ class StartGame extends Component {
               <div className="d-flex justify-content-center ">
                 <button
                   className="btn btn-primary me-5"
-                  onClick={
-                    (window.location =
-                      "https://draw-guess-sagi-reuven.herokuapp.com/game/start")
-                  }
+                  onClick={this.handleRefresh}
                 >
                   Refresh Drawing
                 </button>
