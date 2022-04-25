@@ -38,7 +38,7 @@ class PickWord extends Component {
     this.setState({ word: target.innerText });
   };
   refresh = () => {
-    window.location = "https://draw-guess-sagi-reuven.herokuapp.com/game/pick";
+    window.location = "/game/pick";
   };
   render() {
     const { easy, medium, hard, word } = this.state;
@@ -85,7 +85,7 @@ class PickWord extends Component {
                 Refresh Words
               </button>
               <Link
-                to={"/game/start"}
+                to="/game/start"
                 className="btn btn-success ms-5"
                 onClick={this.handleWordChoosing}
               >
