@@ -79,9 +79,9 @@ class PickWord extends Component {
             </div>
             <div className="col-12 d-flex justify-content-center">
               <Link
-                to="/game/start"
                 className="btn btn-success ms-5"
                 onClick={this.handleWordChoosing}
+                to="/game/start"
               >
                 Start Game
               </Link>
